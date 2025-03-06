@@ -5,5 +5,10 @@ for(let i = 0;i<10;i++){
     if(arr[i] === input){
         count++;
     }
+} 
+
+if (count > 0) {
+    console.log("Số " + input + " xuất hiện " + count + " lần trong mảng");
+} else {
+    console.log("Số " + input + " không tồn tại trong mảng");
 }
-document.writeln(`Số ${input} xuất hiện ${count} lần`);

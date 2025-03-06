@@ -1,9 +1,13 @@
-let arr = [2,5,7,4,1,8,6,2,5,7];
-let input = +prompt('Nhập số cần tìm: ');
-let count = 0;
-for(let i = 0;i<10;i++){
-    if(arr[i] === input){
-        count++;
+let arr = [2, 5, 7, 4, 1, 8, 6, 2, 5, 7];
+for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length - i - 1; j++) {
+        if (arr[j] > arr[j + 1]) {
+            let temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+        }
     }
 }
-document.writeln(`Số ${input} xuất hiện ${count} lần`);
+for (let i = 0; i < arr.length; i++) {
+    document.writeln(arr[i]);
+}
